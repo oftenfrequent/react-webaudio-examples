@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+ 	box-sizing: border-box;
+}
+
+
+.App {
+	padding: 30px;
+}
+
+
+.button-container {
+	height: 20px;
+	width: 50px;
+	background: white;
+	border: 1px solid #ddd;
+	float: left;
+	margin-right: 1px;
+	margin-bottom: 1px;
+
+}
+
+.button-container.sharp {
+	background: #ccc;
+}
+
+.button-container.active {
+	background: orange;
+}
+
+
+
+.step-channel-container {
+	margin-bottom: 700px;
+	display: block;
+}
+
+.column-container {
+	width: 50px;
+	margin-right: 4px;
+	float: left;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+
+.column-container.active {
+	opacity: 0.5;
+}
+
+.column-container:nth-child(4n+4) {
+	margin-right: 10px;
+}
+
+h1 {
+	order: -1;
+	text-align: center;
+}
+
+
+
+
+
+.booth {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 500px;
+}
+
+.turntable {
+	border: 1px solid black;
+	padding: 20px;
+	display: inline-block;
+	height: 200px;
+}
+
+.turntable button {
+	border: 1px solid black;
+	padding: 10px 20px;
+	text-align: center;
+	width: 100px;
+	margin-right: 40px;
+}
+
+.turntable input[type="range"] {
+	width: 50px;
+	height: 150px;
+	-webkit-appearance: slider-vertical;
+}
+
+.mixer {
+	border: 1px solid black;
+	height: 200px;
+	padding: 20px;
+	display: inline-block;
+}
+
+.mixer .channel {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.mixer .channel input[type="range"]{
+	display: block;
+	width: 50px;
+	height: 100px;
+	-webkit-appearance: slider-vertical;
+}
+
+.mixer .channel h5{
+	text-align: center;
+}
+
+.mixer .crossfader {
+	display: block;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+.simple-play {
+	margin-top: 300px;
+	margin-bottom: 700px;
+}
+
+.simple-play button {
+	margin-right: 50px;
+}
+
+
+.synth {
+	margin-bottom: 500px;
+}
+
+
+
+.sampler-container {
+	margin-bottom: 500px;
+	border: 1px solid black;
+	padding: 5px 0px 0px 5px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1227px;
+}
+
+.pad-container {
+	border: 1px solid black;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	display: inline-block;
+}
+
+.pad-container.new {
+	border: 1px solid black;
+	background: lightgray;
+	text-align: center;
+	padding-top: 120px;
+}
+
+
+.pad-container button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.pad-container .canvas-container, .pad-container .visualizer {
+	height: 100%;
+	width: 100%;
+}
