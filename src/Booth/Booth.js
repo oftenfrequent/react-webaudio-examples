@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Turntable from './Turntable';
 import Mixer from './Mixer';
-import tracks from '../assets/sources';
+import tracks from '../assets/sources.example';
 
 const context = new AudioContext();
 

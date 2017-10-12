@@ -1,7 +1,7 @@
 import React from 'react';
 import 'whatwg-fetch';
 
-import tracks from './assets/sources';
+import tracks from './assets/sources.example';
 
 const context = new AudioContext();
 
