@@ -18,7 +18,7 @@
 
 # all assets
 src/assets/*
-!src/assets/source.example.js
+!src/assets/sources.example.js
 !src/assets/BatteryBenson.wav
 
 npm-debug.log*
