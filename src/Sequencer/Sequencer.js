@@ -95,6 +95,8 @@ class Sequencer extends React.Component {
 
 	componentWillUnmount() {
 		Tone.Transport.clear(this.state.repeatId)
+		Tone.Transport.stop();
+		stepLength.map((s, i) => { if (this.state[i].id) Tone.Transport.clear(this.state[i].id); });
 		this.setState({ repeatId: null })
 	}
 
@@ -110,7 +112,7 @@ class Sequencer extends React.Component {
 		Tone.Transport.loopStart = '0';
 		Tone.Transport.loopEnd = '1m';
 		Tone.Transport.loopLength = 1;
-		this.setState({ activeStep: 0, repeatId })
+		this.setState({ activeStep: -1, repeatId });
 		Tone.Transport.start();
 	}
 
