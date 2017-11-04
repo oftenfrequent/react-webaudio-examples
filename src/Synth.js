@@ -80,7 +80,9 @@ class Synth extends React.Component {
   render() {
     return (
       <div className="synth">
-        <input onKeyDown={(e) => this.onKeyDown(e)} onKeyUp={(e) => this.onKeyUp(e)} />
+        <label>Synth</label>
+        <p>Type any of the following keys 'a s d f g h j k l</p>
+        <input placeholder="Type 'a s d f g h j k l'" onKeyDown={(e) => this.onKeyDown(e)} onKeyUp={(e) => this.onKeyUp(e)} />
       </div>
     );
   }

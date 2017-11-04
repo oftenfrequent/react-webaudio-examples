@@ -30,6 +30,13 @@ class Pad extends React.Component {
     this.initializeMicrophone()
   }
 
+  componentWillUnmount(){
+    if(this.state.isRecording){
+      this.state.recorder.stop();
+      this.state.recorder.clear();
+    }
+  }
+
   startVisualization() {
     const canvas = document.querySelector(`.visualizer${this.props.index}`)
     const canvasCtx = canvas.getContext('2d')
