@@ -35,6 +35,10 @@ class SimplePlay extends React.Component {
   	});
 	}
 
+	componentWillUnmount(){
+		if (this.state.source) this.stop();
+	}
+
 	async getAudioBuffers (url) {
 		const response = await fetch(url)
 		const arrayBuffer = await response.arrayBuffer()
