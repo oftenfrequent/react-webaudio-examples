@@ -21,7 +21,7 @@ class Turntable extends React.Component {
   	this.setState({ sourceBuffer });
 	}
 	componentWillUnmount(){
-		this.state.source ? this.state.source.stop() : null;
+		if (this.state.source) this.state.source.stop();
 	}
 	async getAudioBuffers (url) {
 		const response = await fetch(url)
